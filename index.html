@@ -1,1 +1,1053 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030a14">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Datenschutzerklärung und Support für die App Listig von Jaradii.">
+  <title>Listig – Datenschutz &amp; Support</title>
 
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #030a14;
+      --surface: rgba(10, 28, 42, 0.82);
+      --text: #f3fbff;
+      --muted: #a7bfcb;
+      --line: rgba(164, 220, 239, 0.14);
+      --accent: #00aeef;
+      --accent-bright: #45caff;
+      --accent-soft: rgba(0, 174, 239, 0.12);
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+      --content-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+      background: var(--background);
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 88% 8%, rgba(0, 174, 239, 0.18), transparent 32rem),
+        radial-gradient(circle at 4% 52%, rgba(38, 214, 197, 0.09), transparent 28rem),
+        linear-gradient(180deg, #020711 0%, var(--background) 45%, #04101b 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent-bright);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 100;
+      padding: 10px 15px;
+      border-radius: 12px;
+      color: #00121d;
+      background: var(--accent-bright);
+      transform: translateY(-160%);
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .shell {
+      width: min(var(--content-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 18px;
+      right: 0;
+      left: 0;
+      z-index: 50;
+      padding: 0 20px;
+    }
+
+    .navigation {
+      width: min(var(--content-width), 100%);
+      min-height: 68px;
+      margin: 0 auto;
+      padding: 10px 12px 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(3, 12, 21, 0.76);
+      box-shadow: 0 18px 52px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(22px) saturate(130%);
+      -webkit-backdrop-filter: blur(22px) saturate(130%);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 760;
+      letter-spacing: -0.025em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid rgba(102, 212, 255, 0.28);
+      border-radius: 12px;
+      color: #dff7ff;
+      background:
+        radial-gradient(
+          circle at 28% 24%,
+          rgba(255, 255, 255, 0.28),
+          transparent 24%
+        ),
+        linear-gradient(145deg, #07396a, #07133d 62%, #120840);
+      box-shadow: 0 8px 22px rgba(0, 174, 239, 0.18);
+      font-size: 18px;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: auto -8px -16px 8px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(0, 174, 239, 0.22);
+      filter: blur(8px);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a,
+    .button {
+      transition:
+        color 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-contact {
+      min-height: 44px;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      color: #00131e;
+      background: var(--accent-bright);
+      font-size: 14px;
+      font-weight: 780;
+      white-space: nowrap;
+    }
+
+    .nav-contact:hover,
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 720px;
+      padding: 188px 20px 110px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      opacity: 0.38;
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.028) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.028) 1px,
+          transparent 1px
+        );
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, #000 35%, transparent 96%);
+    }
+
+    .glow {
+      position: absolute;
+      z-index: -1;
+      width: 560px;
+      height: 560px;
+      right: -190px;
+      top: 80px;
+      border: 1px solid rgba(69, 202, 255, 0.13);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 86px rgba(0, 174, 239, 0.025),
+        0 0 0 172px rgba(0, 174, 239, 0.018);
+    }
+
+    .eyebrow {
+      margin: 0 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--accent-bright);
+      font-size: 12px;
+      font-weight: 820;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 7px var(--accent-soft);
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0;
+      font-size: clamp(58px, 8.5vw, 104px);
+      font-weight: 760;
+      line-height: 0.94;
+      letter-spacing: -0.072em;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 12px;
+      color: var(--accent-bright);
+    }
+
+    .hero-lead {
+      max-width: 690px;
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 21px);
+      line-height: 1.58;
+      letter-spacing: -0.018em;
+    }
+
+    .hero-actions {
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 54px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 1px solid transparent;
+      border-radius: 15px;
+      font-size: 15px;
+      font-weight: 760;
+    }
+
+    .button-primary {
+      color: #00131e;
+      background: var(--accent-bright);
+      box-shadow: 0 18px 40px rgba(0, 174, 239, 0.16);
+    }
+
+    .button-secondary {
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero-proof {
+      margin-top: 76px;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      border-top: 1px solid var(--line);
+      color: #7795a5;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-proof div {
+      display: flex;
+      gap: 22px;
+    }
+
+    .content-section {
+      padding: 108px 0;
+    }
+
+    .content-section.alt {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(6, 19, 31, 0.68);
+    }
+
+    .section-head {
+      margin-bottom: 42px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      align-items: end;
+      gap: 70px;
+    }
+
+    .section-head h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(42px, 6vw, 70px);
+    }
+
+    .section-head > p {
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: 0 12px 38px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.24rem;
+      letter-spacing: -0.025em;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card p:last-child,
+    .card ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .card strong {
+      color: var(--text);
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .faq {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: rgba(8, 24, 37, 0.72);
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    details:first-child {
+      border-top: 0;
+    }
+
+    summary {
+      position: relative;
+      padding: 26px 72px 26px 30px;
+      cursor: pointer;
+      list-style: none;
+      font-size: 18px;
+      font-weight: 740;
+      letter-spacing: -0.018em;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      top: 18px;
+      right: 30px;
+      color: var(--accent-bright);
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .answer {
+      max-width: 850px;
+      padding: 0 30px 28px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .contact-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(34px, 7vw, 74px);
+      border: 1px solid rgba(69, 202, 255, 0.23);
+      border-radius: 34px;
+      background:
+        radial-gradient(
+          circle at 92% 20%,
+          rgba(0, 174, 239, 0.19),
+          transparent 24rem
+        ),
+        linear-gradient(135deg, #0a2131, #050d18 72%);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .contact-panel h2 {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: clamp(40px, 6vw, 70px);
+    }
+
+    .contact-panel > p {
+      max-width: 680px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contact-details {
+      width: min(580px, 100%);
+      margin: 34px auto 0;
+      padding: 24px;
+      display: grid;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .contact-details strong {
+      font-size: 20px;
+    }
+
+    .contact-details a {
+      color: var(--accent-bright);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-panel .button {
+      margin-top: 24px;
+    }
+
+    footer {
+      min-height: 130px;
+      padding: 34px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: #7592a1;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--accent-bright);
+    }
+
+    @media (max-width: 820px) {
+      .site-header {
+        top: 10px;
+        padding: 0 12px;
+      }
+
+      .navigation {
+        min-height: 62px;
+        border-radius: 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 154px 10px 86px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head > p {
+        max-width: 660px;
+        margin-top: 24px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card.wide {
+        grid-column: auto;
+      }
+
+      .content-section {
+        padding: 84px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: min(100% - 24px, var(--content-width));
+      }
+
+      .navigation {
+        padding: 8px 9px 8px 11px;
+      }
+
+      .brand {
+        font-size: 15px;
+      }
+
+      .brand-mark {
+        width: 37px;
+        height: 37px;
+      }
+
+      .nav-contact {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: clamp(48px, 16vw, 72px);
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-proof {
+        display: block;
+        line-height: 1.8;
+      }
+
+      .hero-proof div {
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      summary {
+        padding-left: 22px;
+      }
+
+      .answer {
+        padding-right: 22px;
+        padding-left: 22px;
+      }
+
+      .contact-panel {
+        border-radius: 26px;
+      }
+
+      footer {
+        min-height: 150px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <nav class="navigation" aria-label="Hauptnavigation">
+      <a class="brand" href="#top" aria-label="Listig – zum Seitenanfang">
+        <span class="brand-mark" aria-hidden="true">✓</span>
+        <span>Listig</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#support">Support</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+
+      <a
+        class="nav-contact"
+        href="mailto:appfeedback.rented544@passmail.net?subject=Listig%20Support"
+      >
+        E-Mail schreiben
+      </a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="glow" aria-hidden="true"></div>
+
+      <div class="shell">
+        <p class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Listig · Jaradii
+        </p>
+
+        <h1>
+          Datenschutz.
+          <span>Support. Zusammen.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Hier findest du alle Informationen zum Umgang mit deinen Daten und
+          schnelle Hilfe rund um Listig – übersichtlich auf einer Seite.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#datenschutz">
+            Datenschutz ansehen
+            <span aria-hidden="true">↓</span>
+          </a>
+
+          <a class="button button-secondary" href="#support">
+            Zum Support
+          </a>
+        </div>
+
+        <div class="hero-proof" aria-label="Kurzüberblick">
+          <span>Keine Werbung · Kein Tracking</span>
+
+          <div>
+            <span>iPhone</span>
+            <span>iPad</span>
+            <span>iCloud optional</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section alt"
+      id="datenschutz"
+      aria-labelledby="privacy-title"
+    >
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Datenschutzerklärung
+            </p>
+
+            <h2 id="privacy-title">
+              Deine Einkaufsliste bleibt deine.
+            </h2>
+          </div>
+
+          <p>
+            Listig funktioniert ohne eigenes Benutzerkonto. iCloud wird nur
+            genutzt, wenn du die Synchronisierung oder das Teilen einer Liste
+            aktivierst.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card wide">
+            <h3>1. Verantwortlicher</h3>
+
+            <p>
+              Verantwortlich für die App Listig ist
+              <strong>Jaradii</strong>. Datenschutzanfragen kannst du per
+              E-Mail an
+              <a href="mailto:appfeedback.rented544@passmail.net">
+                appfeedback.rented544@passmail.net
+              </a>
+              senden.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>2. Welche Daten Listig verarbeitet</h3>
+
+            <p>
+              Je nach Nutzung verarbeitet Listig Einkaufsartikel, Kategorien,
+              Mengen, Notizen, ausgewählte Produktbilder, App-Einstellungen
+              und Informationen darüber, wer einen Artikel zu einer geteilten
+              Liste hinzugefügt hat.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>3. Lokale Speicherung</h3>
+
+            <p>
+              Deine Liste und Einstellungen werden zunächst lokal auf deinem
+              Gerät gespeichert. Listig benötigt kein eigenes Konto und
+              überträgt diese Daten nicht an einen eigenen Server von Jaradii.
+            </p>
+          </article>
+
+          <article class="card wide">
+            <h3>4. Optionale iCloud-Synchronisierung</h3>
+
+            <p>
+              Wenn du iCloud Sync aktivierst, verarbeitet Apple deine
+              Listendaten über CloudKit in deinem privaten iCloud-Bereich.
+              Dadurch kann Listig deine Einkaufsliste zwischen deinen
+              Apple-Geräten synchronisieren. Jaradii betreibt dafür keinen
+              eigenen Synchronisierungsserver und hat keinen Zugriff auf deine
+              private CloudKit-Datenbank.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>5. Geteilte Listen</h3>
+
+            <p>
+              Wenn du eine Liste teilst, erhalten ausschließlich die von dir
+              eingeladenen Personen Zugriff auf die freigegebenen Inhalte.
+              Anzeigenamen beziehungsweise technische iCloud-Kennungen können
+              verwendet werden, um Änderungen den Teilnehmern zuzuordnen.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>6. Produktbilder</h3>
+
+            <p>
+              Listig greift nur auf ein Bild zu, das du selbst über die
+              systemeigene Fotoauswahl auswählst. Bei aktivierter
+              Synchronisierung kann dieses Bild zusammen mit dem zugehörigen
+              Artikel über CloudKit synchronisiert oder geteilt werden.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>7. Mitteilungen</h3>
+
+            <p>
+              Mitteilungen über Änderungen an geteilten Listen sind
+              freiwillig. Sie werden erst nach deiner Zustimmung aktiviert und
+              technisch über die Systemdienste von Apple und CloudKit
+              zugestellt.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>8. Werbung, Analyse und Tracking</h3>
+
+            <p>
+              Listig verwendet keine Werbung, keine Analyse-Dienste und kein
+              App-übergreifendes Tracking. Es werden keine Nutzungsprofile für
+              Werbezwecke erstellt.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>9. Löschen und Aufbewahrung</h3>
+
+            <p>
+              Artikel und Kategorien kannst du direkt in Listig löschen.
+              Gelöschte Artikel können zunächst im Papierkorb liegen und dort
+              wiederhergestellt oder endgültig entfernt werden. Lokale
+              App-Daten werden außerdem entfernt, wenn du die App samt Daten
+              löschst.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>10. Supportanfragen</h3>
+
+            <p>
+              Wenn du eine Support-E-Mail sendest, werden deine E-Mail-Adresse,
+              deine Nachricht und freiwillig beigefügte Inhalte ausschließlich
+              verarbeitet, um deine Anfrage zu beantworten. Sende bitte keine
+              unnötigen persönlichen oder vertraulichen Daten.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>11. Deine Kontrolle</h3>
+
+            <p>
+              Du kannst lokale Inhalte direkt in der App verwalten und
+              löschen. iCloud-Inhalte und Freigaben kontrollierst du über
+              Listig und deinen Apple Account. Mitteilungsberechtigungen kannst
+              du jederzeit in den Systemeinstellungen ändern.
+            </p>
+          </article>
+
+          <article class="card wide">
+            <h3>12. Änderungen dieser Erklärung</h3>
+
+            <p>
+              Diese Datenschutzerklärung wird angepasst, wenn sich Funktionen,
+              Datenflüsse oder rechtliche Anforderungen ändern. Die aktuelle
+              Fassung wird unter derselben Internetadresse bereitgestellt.
+            </p>
+
+            <p>Stand: 16. September 2026</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section"
+      id="support"
+      aria-labelledby="support-title"
+    >
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Support
+            </p>
+
+            <h2 id="support-title">
+              Schnell wieder zur Liste.
+            </h2>
+          </div>
+
+          <p>
+            Die häufigsten Fragen zu Synchronisierung, Freigaben,
+            Mitteilungen und deinen Artikeln – direkt beantwortet.
+          </p>
+        </div>
+
+        <div class="faq">
+          <details open>
+            <summary>Funktioniert Listig ohne iCloud?</summary>
+
+            <div class="answer">
+              Ja. Du kannst deine persönliche Einkaufsliste lokal verwenden,
+              ohne dich anzumelden. iCloud wird nur benötigt, wenn du die Liste
+              zwischen Geräten synchronisieren oder mit anderen Personen
+              teilen möchtest.
+            </div>
+          </details>
+
+          <details>
+            <summary>Warum synchronisiert meine Liste nicht?</summary>
+
+            <div class="answer">
+              Prüfe, ob du auf dem Gerät mit deinem Apple Account angemeldet
+              bist und iCloud Drive aktiviert ist. Öffne anschließend in
+              Listig „iCloud &amp; Teilen“ und kontrolliere dort den
+              Synchronisierungsstatus.
+            </div>
+          </details>
+
+          <details>
+            <summary>Wie teile ich meine Einkaufsliste?</summary>
+
+            <div class="answer">
+              Öffne das Menü in Listig, wähle „iCloud &amp; Teilen“, aktiviere
+              iCloud Sync und starte die Freigabe. Die eingeladene Person muss
+              die Apple-Einladung mit dem vorgesehenen Apple Account annehmen.
+            </div>
+          </details>
+
+          <details>
+            <summary>Warum erhalte ich keine Mitteilungen?</summary>
+
+            <div class="answer">
+              Aktiviere Änderungsmitteilungen in „iCloud &amp; Teilen“ und
+              erlaube Mitteilungen zusätzlich in den iOS- beziehungsweise
+              iPadOS-Einstellungen. Mitteilungen setzen eine aktive geteilte
+              Liste voraus.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Kann ich einen gelöschten Artikel wiederherstellen?
+            </summary>
+
+            <div class="answer">
+              Ja. Öffne den Papierkorb, wische beim gewünschten Artikel nach
+              rechts und stelle ihn wieder her. Dort kannst du Artikel auch
+              endgültig entfernen.
+            </div>
+          </details>
+
+          <details>
+            <summary>Wie füge ich ein Produktbild hinzu?</summary>
+
+            <div class="answer">
+              Öffne einen Artikel oder erstelle einen neuen und wähle ein Bild
+              über die Fotoauswahl. Listig erhält nur Zugriff auf das von dir
+              ausgewählte Bild.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Was sollte ich bei einer Fehlermeldung senden?
+            </summary>
+
+            <div class="answer">
+              Nenne nach Möglichkeit die Listig-Version, deine iOS- oder
+              iPadOS-Version, das Gerätemodell und die Schritte bis zum
+              Problem. Sende keine Apple-Account-Daten oder vertraulichen
+              Einkaufsinhalte.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section alt"
+      id="kontakt"
+      aria-labelledby="contact-title"
+    >
+      <div class="shell">
+        <div class="contact-panel">
+          <p class="eyebrow" style="justify-content: center">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Kontakt
+          </p>
+
+          <h2 id="contact-title">
+            Noch etwas unklar?
+          </h2>
+
+          <p>
+            Schreib eine kurze E-Mail mit deinem Anliegen. Wir melden uns so
+            schnell wie möglich zurück.
+          </p>
+
+          <div class="contact-details" aria-label="Kontaktdaten">
+            <strong>Jaradii</strong>
+
+            <a href="mailto:appfeedback.rented544@passmail.net">
+              appfeedback.rented544@passmail.net
+            </a>
+          </div>
+
+          <a
+            class="button button-primary"
+            href="mailto:appfeedback.rented544@passmail.net?subject=Listig%20Support"
+          >
+            Support per E-Mail kontaktieren
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <span>© 2026 Jaradii · Listig</span>
+
+    <span>
+      <a href="#datenschutz">Datenschutz</a>
+      ·
+      <a href="#support">Support</a>
+    </span>
+  </footer>
+</body>
+</html>
