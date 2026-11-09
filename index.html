@@ -12,13 +12,16 @@
     :root {
       color-scheme: dark;
       --background: #030a14;
+      --background-raised: #071421;
       --surface: rgba(10, 28, 42, 0.82);
+      --surface-strong: #0b1d2b;
       --text: #f3fbff;
       --muted: #a7bfcb;
       --line: rgba(164, 220, 239, 0.14);
       --accent: #00aeef;
       --accent-bright: #45caff;
       --accent-soft: rgba(0, 174, 239, 0.12);
+      --turquoise: #26d6c5;
       --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
       --content-width: 1080px;
     }
@@ -43,8 +46,7 @@
         radial-gradient(circle at 88% 8%, rgba(0, 174, 239, 0.18), transparent 32rem),
         radial-gradient(circle at 4% 52%, rgba(38, 214, 197, 0.09), transparent 28rem),
         linear-gradient(180deg, #020711 0%, var(--background) 45%, #04101b 100%);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Helvetica Neue", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -130,11 +132,7 @@
       border-radius: 12px;
       color: #dff7ff;
       background:
-        radial-gradient(
-          circle at 28% 24%,
-          rgba(255, 255, 255, 0.28),
-          transparent 24%
-        ),
+        radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.28), transparent 24%),
         linear-gradient(145deg, #07396a, #07133d 62%, #120840);
       box-shadow: 0 8px 22px rgba(0, 174, 239, 0.18);
       font-size: 18px;
@@ -160,11 +158,7 @@
 
     .nav-links a,
     .button {
-      transition:
-        color 180ms ease,
-        background 180ms ease,
-        border-color 180ms ease,
-        transform 180ms ease;
+      transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
 
     .nav-links a:hover {
@@ -207,15 +201,8 @@
       z-index: -2;
       opacity: 0.38;
       background-image:
-        linear-gradient(
-          rgba(255, 255, 255, 0.028) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.028) 1px,
-          transparent 1px
-        );
+        linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
       background-size: 72px 72px;
       mask-image: linear-gradient(to bottom, #000 35%, transparent 96%);
     }
@@ -471,11 +458,7 @@
       border: 1px solid rgba(69, 202, 255, 0.23);
       border-radius: 34px;
       background:
-        radial-gradient(
-          circle at 92% 20%,
-          rgba(0, 174, 239, 0.19),
-          transparent 24rem
-        ),
+        radial-gradient(circle at 92% 20%, rgba(0, 174, 239, 0.19), transparent 24rem),
         linear-gradient(135deg, #0a2131, #050d18 72%);
       box-shadow: var(--shadow);
       text-align: center;
@@ -675,10 +658,7 @@
         <a href="#kontakt">Kontakt</a>
       </div>
 
-      <a
-        class="nav-contact"
-        href="mailto:appfeedback.rented544@passmail.net?subject=Listig%20Support"
-      >
+      <a class="nav-contact" href="mailto:appfeedback.rented544@passmail.net?subject=Listig%20Support">
         E-Mail schreiben
       </a>
     </nav>
@@ -687,353 +667,167 @@
   <main id="main-content">
     <section class="hero" id="top">
       <div class="glow" aria-hidden="true"></div>
-
       <div class="shell">
-        <p class="eyebrow">
-          <span class="eyebrow-dot" aria-hidden="true"></span>
-          Listig · Jaradii
-        </p>
-
-        <h1>
-          Datenschutz.
-          <span>Support. Zusammen.</span>
-        </h1>
-
-        <p class="hero-lead">
-          Hier findest du alle Informationen zum Umgang mit deinen Daten und
-          schnelle Hilfe rund um Listig – übersichtlich auf einer Seite.
-        </p>
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Listig · Jaradii</p>
+        <h1>Datenschutz.<span>Support. Zusammen.</span></h1>
+        <p class="hero-lead">Hier findest du alle Informationen zum Umgang mit deinen Daten und schnelle Hilfe rund um Listig – übersichtlich auf einer Seite.</p>
 
         <div class="hero-actions">
-          <a class="button button-primary" href="#datenschutz">
-            Datenschutz ansehen
-            <span aria-hidden="true">↓</span>
-          </a>
-
-          <a class="button button-secondary" href="#support">
-            Zum Support
-          </a>
+          <a class="button button-primary" href="#datenschutz">Datenschutz ansehen <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="#support">Zum Support</a>
         </div>
 
         <div class="hero-proof" aria-label="Kurzüberblick">
           <span>Keine Werbung · Kein Tracking</span>
-
-          <div>
-            <span>iPhone</span>
-            <span>iPad</span>
-            <span>iCloud optional</span>
-          </div>
+          <div><span>iPhone</span><span>iPad</span><span>iCloud optional</span></div>
         </div>
       </div>
     </section>
 
-    <section
-      class="content-section alt"
-      id="datenschutz"
-      aria-labelledby="privacy-title"
-    >
+    <section class="content-section alt" id="datenschutz" aria-labelledby="privacy-title">
       <div class="shell">
         <div class="section-head">
           <div>
-            <p class="eyebrow">
-              <span class="eyebrow-dot" aria-hidden="true"></span>
-              Datenschutzerklärung
-            </p>
-
-            <h2 id="privacy-title">
-              Deine Einkaufsliste bleibt deine.
-            </h2>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Datenschutzerklärung</p>
+            <h2 id="privacy-title">Deine Einkaufsliste bleibt deine.</h2>
           </div>
-
-          <p>
-            Listig funktioniert ohne eigenes Benutzerkonto. iCloud wird nur
-            genutzt, wenn du die Synchronisierung oder das Teilen einer Liste
-            aktivierst.
-          </p>
+          <p>Listig funktioniert ohne eigenes Benutzerkonto. iCloud wird nur genutzt, wenn du die Synchronisierung oder das Teilen einer Liste aktivierst.</p>
         </div>
 
         <div class="grid">
           <article class="card wide">
             <h3>1. Verantwortlicher</h3>
-
-            <p>
-              Verantwortlich für die App Listig ist
-              <strong>Jaradii</strong>. Datenschutzanfragen kannst du per
-              E-Mail an
-              <a href="mailto:appfeedback.rented544@passmail.net">
-                appfeedback.rented544@passmail.net
-              </a>
-              senden.
-            </p>
+            <p>Verantwortlich für die App Listig ist <strong>Jaradii</strong>. Datenschutzanfragen kannst du per E-Mail an <a href="mailto:appfeedback.rented544@passmail.net">appfeedback.rented544@passmail.net</a> senden.</p>
           </article>
 
           <article class="card">
             <h3>2. Welche Daten Listig verarbeitet</h3>
-
-            <p>
-              Je nach Nutzung verarbeitet Listig Einkaufsartikel, Kategorien,
-              Mengen, Notizen, ausgewählte Produktbilder, App-Einstellungen
-              und Informationen darüber, wer einen Artikel zu einer geteilten
-              Liste hinzugefügt hat.
-            </p>
+            <p>Je nach Nutzung verarbeitet Listig Einkaufsartikel, Kategorien, Mengen, Notizen, ausgewählte Produktbilder, App-Einstellungen und Informationen darüber, wer einen Artikel zu einer geteilten Liste hinzugefügt hat. In geteilten Listen kommen dein Anzeigename und – nur wenn du eines festlegst – dein Profilbild hinzu.</p>
           </article>
 
           <article class="card">
             <h3>3. Lokale Speicherung</h3>
-
-            <p>
-              Deine Liste und Einstellungen werden zunächst lokal auf deinem
-              Gerät gespeichert. Listig benötigt kein eigenes Konto und
-              überträgt diese Daten nicht an einen eigenen Server von Jaradii.
-            </p>
+            <p>Deine Liste und Einstellungen werden zunächst lokal auf deinem Gerät gespeichert. Listig benötigt kein eigenes Konto und überträgt diese Daten nicht an einen eigenen Server von Jaradii.</p>
           </article>
 
           <article class="card wide">
             <h3>4. Optionale iCloud-Synchronisierung</h3>
-
-            <p>
-              Wenn du iCloud Sync aktivierst, verarbeitet Apple deine
-              Listendaten über CloudKit in deinem privaten iCloud-Bereich.
-              Dadurch kann Listig deine Einkaufsliste zwischen deinen
-              Apple-Geräten synchronisieren. Jaradii betreibt dafür keinen
-              eigenen Synchronisierungsserver und hat keinen Zugriff auf deine
-              private CloudKit-Datenbank.
-            </p>
+            <p>Wenn du iCloud Sync aktivierst, verarbeitet Apple deine Listendaten über CloudKit in deinem privaten iCloud-Bereich. Dadurch kann Listig deine Einkaufsliste zwischen deinen Apple-Geräten synchronisieren. Jaradii betreibt dafür keinen eigenen Synchronisierungsserver und hat keinen Zugriff auf deine private CloudKit-Datenbank.</p>
           </article>
 
-          <article class="card">
+          <article class="card wide">
             <h3>5. Geteilte Listen</h3>
-
-            <p>
-              Wenn du eine Liste teilst, erhalten ausschließlich die von dir
-              eingeladenen Personen Zugriff auf die freigegebenen Inhalte.
-              Anzeigenamen beziehungsweise technische iCloud-Kennungen können
-              verwendet werden, um Änderungen den Teilnehmern zuzuordnen.
-            </p>
+            <p>Wenn du eine Liste teilst, erhalten ausschließlich die von dir eingeladenen Personen Zugriff auf die freigegebenen Inhalte. Anzeigenamen beziehungsweise technische iCloud-Kennungen können verwendet werden, um Änderungen den Teilnehmern zuzuordnen.</p>
+            <p><strong>Profilbild (freiwillig):</strong> In einer geteilten Liste kannst du unter „iCloud &amp; Freigabe“ ein Profilbild festlegen. Listig erhält dafür nur das Foto, das du in der systemeigenen Fotoauswahl auswählst, schneidet es auf ein Quadrat von 192&nbsp;×&nbsp;192&nbsp;Pixeln zu und speichert es über CloudKit zusammen mit der geteilten Liste im iCloud-Bereich der Person, die die Liste teilt. Sehen können es nur die Personen in dieser Liste – neben deinem Namen und bei den Artikeln, die du hinzugefügt hast. Du kannst es jederzeit ändern oder entfernen. Verlässt du die Liste, kann es bei deinen Artikeln für die anderen sichtbar bleiben; entferne es vorher, wenn du das nicht möchtest. Jaradii erhält das Bild nicht.</p>
           </article>
 
           <article class="card">
             <h3>6. Produktbilder</h3>
-
-            <p>
-              Listig greift nur auf ein Bild zu, das du selbst über die
-              systemeigene Fotoauswahl auswählst. Bei aktivierter
-              Synchronisierung kann dieses Bild zusammen mit dem zugehörigen
-              Artikel über CloudKit synchronisiert oder geteilt werden.
-            </p>
+            <p>Listig greift nur auf ein Bild zu, das du selbst über die systemeigene Fotoauswahl auswählst. Bei aktivierter Synchronisierung kann dieses Bild zusammen mit dem zugehörigen Artikel über CloudKit synchronisiert oder geteilt werden.</p>
           </article>
 
           <article class="card">
             <h3>7. Mitteilungen</h3>
-
-            <p>
-              Mitteilungen über Änderungen an geteilten Listen sind
-              freiwillig. Sie werden erst nach deiner Zustimmung aktiviert und
-              technisch über die Systemdienste von Apple und CloudKit
-              zugestellt.
-            </p>
+            <p>Mitteilungen über Änderungen an geteilten Listen sind freiwillig. Sie werden erst nach deiner Zustimmung aktiviert und technisch über die Systemdienste von Apple und CloudKit zugestellt.</p>
           </article>
 
           <article class="card">
             <h3>8. Werbung, Analyse und Tracking</h3>
-
-            <p>
-              Listig verwendet keine Werbung, keine Analyse-Dienste und kein
-              App-übergreifendes Tracking. Es werden keine Nutzungsprofile für
-              Werbezwecke erstellt.
-            </p>
+            <p>Listig verwendet keine Werbung, keine Analyse-Dienste und kein App-übergreifendes Tracking. Es werden keine Nutzungsprofile für Werbezwecke erstellt.</p>
           </article>
 
           <article class="card">
             <h3>9. Löschen und Aufbewahrung</h3>
-
-            <p>
-              Artikel und Kategorien kannst du direkt in Listig löschen.
-              Gelöschte Artikel können zunächst im Papierkorb liegen und dort
-              wiederhergestellt oder endgültig entfernt werden. Lokale
-              App-Daten werden außerdem entfernt, wenn du die App samt Daten
-              löschst.
-            </p>
+            <p>Artikel und Kategorien kannst du direkt in Listig löschen. Gelöschte Artikel können zunächst im Papierkorb liegen und dort wiederhergestellt oder endgültig entfernt werden. Lokale App-Daten werden außerdem entfernt, wenn du die App samt Daten löschst.</p>
           </article>
 
           <article class="card">
             <h3>10. Supportanfragen</h3>
-
-            <p>
-              Wenn du eine Support-E-Mail sendest, werden deine E-Mail-Adresse,
-              deine Nachricht und freiwillig beigefügte Inhalte ausschließlich
-              verarbeitet, um deine Anfrage zu beantworten. Sende bitte keine
-              unnötigen persönlichen oder vertraulichen Daten.
-            </p>
+            <p>Wenn du eine Support-E-Mail sendest, werden deine E-Mail-Adresse, deine Nachricht und freiwillig beigefügte Inhalte ausschließlich verarbeitet, um deine Anfrage zu beantworten. Sende bitte keine unnötigen persönlichen oder vertraulichen Daten.</p>
           </article>
 
           <article class="card">
             <h3>11. Deine Kontrolle</h3>
-
-            <p>
-              Du kannst lokale Inhalte direkt in der App verwalten und
-              löschen. iCloud-Inhalte und Freigaben kontrollierst du über
-              Listig und deinen Apple Account. Mitteilungsberechtigungen kannst
-              du jederzeit in den Systemeinstellungen ändern.
-            </p>
+            <p>Du kannst lokale Inhalte direkt in der App verwalten und löschen. iCloud-Inhalte und Freigaben kontrollierst du über Listig und deinen Apple Account; dein Profilbild änderst oder entfernst du unter „iCloud &amp; Freigabe“. Mitteilungsberechtigungen kannst du jederzeit in den Systemeinstellungen ändern.</p>
           </article>
 
           <article class="card wide">
             <h3>12. Änderungen dieser Erklärung</h3>
-
-            <p>
-              Diese Datenschutzerklärung wird angepasst, wenn sich Funktionen,
-              Datenflüsse oder rechtliche Anforderungen ändern. Die aktuelle
-              Fassung wird unter derselben Internetadresse bereitgestellt.
-            </p>
-
-            <p>Stand: 16. September 2026</p>
+            <p>Diese Datenschutzerklärung wird angepasst, wenn sich Funktionen, Datenflüsse oder rechtliche Anforderungen ändern. Die aktuelle Fassung wird unter derselben Internetadresse bereitgestellt.</p>
+            <p>Stand: 9. November 2026</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section
-      class="content-section"
-      id="support"
-      aria-labelledby="support-title"
-    >
+    <section class="content-section" id="support" aria-labelledby="support-title">
       <div class="shell">
         <div class="section-head">
           <div>
-            <p class="eyebrow">
-              <span class="eyebrow-dot" aria-hidden="true"></span>
-              Support
-            </p>
-
-            <h2 id="support-title">
-              Schnell wieder zur Liste.
-            </h2>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Support</p>
+            <h2 id="support-title">Schnell wieder zur Liste.</h2>
           </div>
-
-          <p>
-            Die häufigsten Fragen zu Synchronisierung, Freigaben,
-            Mitteilungen und deinen Artikeln – direkt beantwortet.
-          </p>
+          <p>Die häufigsten Fragen zu Synchronisierung, Freigaben, Mitteilungen und deinen Artikeln – direkt beantwortet.</p>
         </div>
 
         <div class="faq">
           <details open>
             <summary>Funktioniert Listig ohne iCloud?</summary>
-
-            <div class="answer">
-              Ja. Du kannst deine persönliche Einkaufsliste lokal verwenden,
-              ohne dich anzumelden. iCloud wird nur benötigt, wenn du die Liste
-              zwischen Geräten synchronisieren oder mit anderen Personen
-              teilen möchtest.
-            </div>
+            <div class="answer">Ja. Du kannst deine persönliche Einkaufsliste lokal verwenden, ohne dich anzumelden. iCloud wird nur benötigt, wenn du die Liste zwischen Geräten synchronisieren oder mit anderen Personen teilen möchtest.</div>
           </details>
 
           <details>
             <summary>Warum synchronisiert meine Liste nicht?</summary>
-
-            <div class="answer">
-              Prüfe, ob du auf dem Gerät mit deinem Apple Account angemeldet
-              bist und iCloud Drive aktiviert ist. Öffne anschließend in
-              Listig „iCloud &amp; Teilen“ und kontrolliere dort den
-              Synchronisierungsstatus.
-            </div>
+            <div class="answer">Prüfe, ob du auf dem Gerät mit deinem Apple Account angemeldet bist und iCloud Drive aktiviert ist. Öffne anschließend in den Einstellungen von Listig „iCloud &amp; Freigabe“ und kontrolliere dort den Synchronisierungsstatus.</div>
           </details>
 
           <details>
             <summary>Wie teile ich meine Einkaufsliste?</summary>
-
-            <div class="answer">
-              Öffne das Menü in Listig, wähle „iCloud &amp; Teilen“, aktiviere
-              iCloud Sync und starte die Freigabe. Die eingeladene Person muss
-              die Apple-Einladung mit dem vorgesehenen Apple Account annehmen.
-            </div>
+            <div class="answer">Öffne in Listig über „…“ die Einstellungen, wähle „iCloud &amp; Freigabe“, aktiviere iCloud Sync und starte die Freigabe. Die eingeladene Person muss die Apple-Einladung mit dem vorgesehenen Apple Account annehmen.</div>
           </details>
 
           <details>
             <summary>Warum erhalte ich keine Mitteilungen?</summary>
-
-            <div class="answer">
-              Aktiviere Änderungsmitteilungen in „iCloud &amp; Teilen“ und
-              erlaube Mitteilungen zusätzlich in den iOS- beziehungsweise
-              iPadOS-Einstellungen. Mitteilungen setzen eine aktive geteilte
-              Liste voraus.
-            </div>
+            <div class="answer">Aktiviere Änderungsmitteilungen in „iCloud &amp; Freigabe“ und erlaube Mitteilungen zusätzlich in den iOS- beziehungsweise iPadOS-Einstellungen. Mitteilungen setzen eine aktive geteilte Liste voraus.</div>
           </details>
 
           <details>
-            <summary>
-              Kann ich einen gelöschten Artikel wiederherstellen?
-            </summary>
-
-            <div class="answer">
-              Ja. Öffne den Papierkorb, wische beim gewünschten Artikel nach
-              rechts und stelle ihn wieder her. Dort kannst du Artikel auch
-              endgültig entfernen.
-            </div>
+            <summary>Kann ich einen gelöschten Artikel wiederherstellen?</summary>
+            <div class="answer">Ja. Öffne den Papierkorb, wische beim gewünschten Artikel nach rechts und stelle ihn wieder her. Dort kannst du Artikel auch endgültig entfernen.</div>
           </details>
 
           <details>
             <summary>Wie füge ich ein Produktbild hinzu?</summary>
-
-            <div class="answer">
-              Öffne einen Artikel oder erstelle einen neuen und wähle ein Bild
-              über die Fotoauswahl. Listig erhält nur Zugriff auf das von dir
-              ausgewählte Bild.
-            </div>
+            <div class="answer">Öffne einen Artikel oder erstelle einen neuen und wähle ein Bild über die Fotoauswahl. Listig erhält nur Zugriff auf das von dir ausgewählte Bild.</div>
           </details>
 
           <details>
-            <summary>
-              Was sollte ich bei einer Fehlermeldung senden?
-            </summary>
+            <summary>Wie lege ich ein Profilbild fest?</summary>
+            <div class="answer">Öffne die Einstellungen, tippe auf „iCloud &amp; Freigabe“ und dann auf „Profilbild“. Das Foto sehen alle in deiner geteilten Liste statt deines Anfangsbuchstabens. Über dieselbe Zeile wählst du ein anderes Foto oder entfernst es. Ein Profilbild gibt es nur in geteilten Listen.</div>
+          </details>
 
-            <div class="answer">
-              Nenne nach Möglichkeit die Listig-Version, deine iOS- oder
-              iPadOS-Version, das Gerätemodell und die Schritte bis zum
-              Problem. Sende keine Apple-Account-Daten oder vertraulichen
-              Einkaufsinhalte.
-            </div>
+          <details>
+            <summary>Was sollte ich bei einer Fehlermeldung senden?</summary>
+            <div class="answer">Nenne nach Möglichkeit die Listig-Version, deine iOS- oder iPadOS-Version, das Gerätemodell und die Schritte bis zum Problem. Sende keine Apple-Account-Daten oder vertraulichen Einkaufsinhalte.</div>
           </details>
         </div>
       </div>
     </section>
 
-    <section
-      class="content-section alt"
-      id="kontakt"
-      aria-labelledby="contact-title"
-    >
+    <section class="content-section alt" id="kontakt" aria-labelledby="contact-title">
       <div class="shell">
         <div class="contact-panel">
-          <p class="eyebrow" style="justify-content: center">
-            <span class="eyebrow-dot" aria-hidden="true"></span>
-            Kontakt
-          </p>
-
-          <h2 id="contact-title">
-            Noch etwas unklar?
-          </h2>
-
-          <p>
-            Schreib eine kurze E-Mail mit deinem Anliegen. Wir melden uns so
-            schnell wie möglich zurück.
-          </p>
+          <p class="eyebrow" style="justify-content: center;"><span class="eyebrow-dot" aria-hidden="true"></span>Kontakt</p>
+          <h2 id="contact-title">Noch etwas unklar?</h2>
+          <p>Schreib eine kurze E-Mail mit deinem Anliegen. Wir melden uns so schnell wie möglich zurück.</p>
 
           <div class="contact-details" aria-label="Kontaktdaten">
             <strong>Jaradii</strong>
-
-            <a href="mailto:appfeedback.rented544@passmail.net">
-              appfeedback.rented544@passmail.net
-            </a>
+            <a href="mailto:appfeedback.rented544@passmail.net">appfeedback.rented544@passmail.net</a>
           </div>
 
-          <a
-            class="button button-primary"
-            href="mailto:appfeedback.rented544@passmail.net?subject=Listig%20Support"
-          >
-            Support per E-Mail kontaktieren
-            <span aria-hidden="true">↗</span>
+          <a class="button button-primary" href="mailto:appfeedback.rented544@passmail.net?subject=Listig%20Support">
+            Support per E-Mail kontaktieren <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
@@ -1042,12 +836,7 @@
 
   <footer class="shell">
     <span>© 2026 Jaradii · Listig</span>
-
-    <span>
-      <a href="#datenschutz">Datenschutz</a>
-      ·
-      <a href="#support">Support</a>
-    </span>
+    <span><a href="#datenschutz">Datenschutz</a> · <a href="#support">Support</a></span>
   </footer>
 </body>
 </html>
